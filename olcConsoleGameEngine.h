@@ -256,8 +256,8 @@ public:
 
 	short SampleGlyph(float x, float y)
 	{
-		int sx = (int)(x * (float)nWidth);
-		int sy = (int)(y * (float)nHeight-1.0f);
+		int sx = (int)(x * (float)(nWidth - 1));
+		int sy = (int)(y * (float)(nHeight - 1));
 		if (sx <0 || sx >= nWidth || sy < 0 || sy >= nHeight)
 			return L' ';
 		else
@@ -266,8 +266,8 @@ public:
 
 	short SampleColour(float x, float y)
 	{
-		int sx = (int)(x * (float)nWidth);
-		int sy = (int)(y * (float)nHeight-1.0f);
+		int sx = (int)(x * (float)(nWidth - 1));
+		int sy = (int)(y * (float)(nHeight - 1));
 		if (sx <0 || sx >= nWidth || sy < 0 || sy >= nHeight)
 			return FG_BLACK;
 		else
